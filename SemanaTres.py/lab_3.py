@@ -28,15 +28,28 @@ def generate_people(num_people: int):
 
 def select_role():
     for person in people_list:
-        if(person["role"]== 1):
-            person["role"] == " Administrativo"
-            elif(person["role"]==2)
-            person["role"] == "profesor"
-            else:
+        if(person["role"] == 1):
+            person["role"] = " Administrativo"
+        elif(person["role"]==2):
+                 person["role"] == "profesor"
+        elif(person["role"] ==3):
+            person["role"]== "SEguridad"         
+        else:
+                 person["role"]= "Estudiante"
+
+
+def  match_role():
+    for person in people_list:                  # se puede de cualquier forma si las comparaciones son mayores que tres match_case 
+        match person["role"]:
+            case "Administrativo":
+                person["role"] = 1
+            case "profesor":
+                person["role"] = 2
+            case "estudiante":
+                person["role"] = 3
                          
 
-    for perosn in people_list:
-        print(person)
+    
 
 
 def print_people():
@@ -46,5 +59,7 @@ def print_people():
 
 
     number = int(input("Por favor ingrese la cantidad de usuarios:\n"))
-    generate_people(number)    
+    generate_people(number) 
+    select_role()   
     print_people()
+    match_person()
