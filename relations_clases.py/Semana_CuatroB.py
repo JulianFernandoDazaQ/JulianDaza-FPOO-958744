@@ -5,7 +5,7 @@ class Author
 
 
     def __str__(self):
-        return F"{self.name}"
+        return F"{self.name}"git
 
 class book:
     def __init__( self, title: str, pages: int, author: Author):
