@@ -1,0 +1,34 @@
+
+class Author:
+     def __init__( self, name,):
+       self.name = name
+       self.books = []
+
+     def add_books(self, book: 'Book'):
+        self.books.append(book)  
+
+     def get_books(self):
+        return F"Libros del author = {[book.title for book in self.books]}"    # list comprension
+
+
+#______________________________
+class Book:
+    def __init__(self, title: str, pages: int, author: Author):
+        self.title = title
+        self.pages = pages
+        self.author = author 
+
+    def __str__(self):
+        return F"Libro: {self.title}"    
+#______________________________
+class Library:
+    def __init__(self):
+        self.books = []  
+
+Author_1 = Author(name='Gabriel Garcia Marquez')
+
+boo
+
+Book_1 = Book('Cien años de soledad', 473, Author_1)
+
+print(Author_1)
