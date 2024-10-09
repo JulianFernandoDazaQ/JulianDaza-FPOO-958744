@@ -106,5 +106,7 @@ def main():
     hospital.listar_pacientes()
 
 # Ejecutar la función principal
+# Ejecutar la funcion
+
 if __name__ == "__main__":
     main()
